@@ -199,7 +199,7 @@ class EU_CaptchaTest extends TestCase
     }
 
     // -------------------------------------------------------------------------
-    // resolveClientIp() / check_cdn_headers
+    // resolveClientIp() / checkCdnHeaders
     // -------------------------------------------------------------------------
 
     public function testCheckCdnHeadersTrueUsesHttpClientIp(): void
@@ -270,7 +270,7 @@ class EU_CaptchaTest extends TestCase
         $_SERVER['HTTP_X_REAL_IP']       = '203.0.113.3';
         $_SERVER['REMOTE_ADDR']          = '10.0.0.1';
 
-        $captcha                 = new TestableEuCaptcha(['sitekey' => 'sk', 'secret' => 'sec', 'check_cdn_headers' => false]);
+        $captcha                 = new TestableEuCaptcha(['sitekey' => 'sk', 'secret' => 'sec', 'checkCdnHeaders' => false]);
         $captcha->mockedResponse = json_encode(['success' => true]);
 
         $captcha->validate('token');

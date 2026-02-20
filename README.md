@@ -69,7 +69,7 @@ All options are passed as an associative array to the constructor.
 | `sitekey`            | string | —       | **Required.** Public sitekey from the dashboard. |
 | `secret`             | string | —       | **Required.** Secret key from the dashboard. Never expose this client-side. |
 | `failDefault`        | bool   | `true`  | Return value used for both network and token state when the API cannot be reached. `true` = fail open (allow on error); `false` = fail closed (deny on error). |
-| `check_cdn_headers`  | bool   | `true`  | When `true`, the client IP is resolved from CDN/proxy headers (`HTTP_CLIENT_IP`, `HTTP_X_FORWARDED_FOR`, `HTTP_X_REAL_IP`) before falling back to `REMOTE_ADDR`. Set to `false` when your server is not behind a proxy, or when you pass the IP explicitly. |
+| `checkCdnHeaders`    | bool   | `true`  | When `true`, the client IP is resolved from CDN/proxy headers (`HTTP_CLIENT_IP`, `HTTP_X_FORWARDED_FOR`, `HTTP_X_REAL_IP`) before falling back to `REMOTE_ADDR`. Set to `false` when your server is not behind a proxy, or when you pass the IP explicitly. |
 
 ## The result object
 

@@ -73,7 +73,7 @@ class EU_Captcha
      *   - sitekey           (string, required) Public sitekey.
      *   - secret            (string, required) Private secret key.
      *   - failDefault       (bool,   optional) Fail-open on network error. Default true.
-     *   - check_cdn_headers (bool,   optional) Read client IP from proxy headers. Default true.
+     *   - checkCdnHeaders   (bool,   optional) Read client IP from proxy headers. Default true.
      *
      * @param  array $options Configuration options.
      * @throws \Exception If 'sitekey' or 'secret' are missing.
@@ -96,8 +96,8 @@ class EU_Captcha
             $this->failDefault = (bool) $options['failDefault'];
         }
 
-        if (isset($options['check_cdn_headers'])) {
-            $this->checkCdnHeaders = (bool) $options['check_cdn_headers'];
+        if (isset($options['checkCdnHeaders'])) {
+            $this->checkCdnHeaders = (bool) $options['checkCdnHeaders'];
         }
     }
 
