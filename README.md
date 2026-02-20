@@ -44,9 +44,9 @@ Verify the submitted token on your server:
 ```php
 <?php
 
-use Myrasec\EU_Captcha;
+use Myrasec\EuCaptcha;
 
-$captcha = new EU_Captcha([
+$captcha = new EuCaptcha([
     'sitekey' => EUCAPTCHA_SITE_KEY,
     'secret'  => EUCAPTCHA_SECRET_KEY,
 ]);
@@ -73,7 +73,7 @@ All options are passed as an associative array to the constructor.
 
 ## The result object
 
-`validate()` returns an `EU_Captcha_Result` with three methods:
+`validate()` returns an `EuCaptchaResult` with three methods:
 
 | Method              | Returns `true` when…                                      |
 |---------------------|-----------------------------------------------------------|
