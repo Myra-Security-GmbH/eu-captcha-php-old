@@ -1,0 +1,20 @@
+{
+    "name": "myra-security-gmbh/eu-captcha-old",
+    "description": "EU captcha protects your website/API against abuse like form spam and credential stuffing",
+    "require": {
+        "php": ">=5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Myrasec\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Myrasec\\Tests\\": "tests/"
+        }
+    }
+}
